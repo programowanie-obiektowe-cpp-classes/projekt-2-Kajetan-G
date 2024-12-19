@@ -4,17 +4,17 @@
 #include <iostream>
 #include <memory>
 #include <stdexcept>
-#include <Eigen/Dense> // Włączamy bibliotekę Eigen
+#include <Eigen/Dense>
 
 class Matrix {
 public:
-    // Konstruktor dla prostokątnych macierzy
+    // Konstruktor dla prostokatnych macierzy
     Matrix(size_t rows, size_t cols);
 
     // Konstruktor dla macierzy kwadratowych
     Matrix(size_t size);
 
-    // Operator dostępowy do elementów macierzy
+    // Operator dostępowy do elementow macierzy
     double& operator()(size_t row, size_t col);
     const double& operator()(size_t row, size_t col) const;
 
@@ -26,6 +26,12 @@ public:
 
     // Operator dodawania macierzy
     Matrix operator+(const Matrix& other) const;
+
+    // Operator odejmowania macierzy
+    Matrix operator-(const Matrix& other) const;
+
+    // Operator mnozenia macierzy
+    Matrix operator*(const Matrix& other) const;
 
 private:
     Eigen::MatrixXd matrix_;  // Używamy Eigen::MatrixXd do przechowywania macierzy

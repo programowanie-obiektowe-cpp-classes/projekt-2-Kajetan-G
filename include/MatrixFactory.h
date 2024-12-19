@@ -6,7 +6,7 @@
 
 class MatrixFactory {
 public:
-    // Tworzenie prostokątnych macierzy
+    // Tworzenie prostokatnych macierzy
     static std::unique_ptr<Matrix> createMatrix(size_t rows, size_t cols);
 
     // Tworzenie kwadratowych macierzy

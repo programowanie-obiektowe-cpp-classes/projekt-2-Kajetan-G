@@ -1,6 +1,6 @@
 #include "MatrixFactory.h"
 
-// Tworzenie prostokątnych macierzy
+// Tworzenie prostokatnych macierzy
 std::unique_ptr<Matrix> MatrixFactory::createMatrix(size_t rows, size_t cols) {
     return std::make_unique<Matrix>(rows, cols);
 }
